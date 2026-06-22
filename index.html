@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friday Chain Prayer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div id="menu" class="menu">
+<a onclick="showAddName()">Add</a>
+<a onclick="showDeleteName()">Delete</a>
+        </div>
+    </div>
+
+    <div id="addNameBox" class="popup">
+    <label>Title</label>
+    <select id="title">
+        <option value="" selected disabled> Select Title </option>
+        <option value="Bro">Bro</option>
+        <option value="Sis">Sis</option>
+        <option value="Prophet">Prophet</option>
+        <option value="Pastor">Pastor</option>
+        <option value="Rev">Rev</option>
+        <option value="Bishop">Bishop</option>
+    </select>
+        <label>Add New Name</label>
+
+        <input type="text" id="newName" placeholder="Enter Name">
+
+        <button class="submit" onclick="addName()">
+            Add
+        </button>
+    </div>
+<div id="deleteNameBox" class="popup">
+
+    <label>Delete Name</label>
+
+    <select id="deleteName">
+        <option value="" selected disabled>Select Name</option>
+    </select>
+
+    <button class="submit" onclick="deleteName()">
+        Delete
+    </button>
+
+</div>
+    
+
+    <h2>Friday Chain Prayer</h2>
+
+    
+    <label>Name</label>
+    <select id="name">
+        <option value="" selected disabled> Select Name </option>
+
+    </select>
+
+    <label>Time Slot</label>
+    <select id="slot">
+
+        <option value="" selected disabled>
+            Select Time Slot
+        </option>
+
+        <option>12:00 AM - 01:00 AM</option>
+        <option>01:00 AM - 02:00 AM</option>
+        <option>02:00 AM - 03:00 AM</option>
+        <option>03:00 AM - 04:00 AM</option>
+        <option>04:00 AM - 05:00 AM</option>
+        <option>05:00 AM - 06:00 AM</option>
+        <option>06:00 AM - 07:00 AM</option>
+        <option>07:00 AM - 08:00 AM</option>
+        <option>08:00 AM - 09:00 AM</option>
+        <option>09:00 AM - 10:00 AM</option>
+        <option>10:00 AM - 11:00 AM</option>
+        <option>11:00 AM - 12:00 PM</option>
+        <option>12:00 PM - 01:00 PM</option>
+        <option>01:00 PM - 02:00 PM</option>
+        <option>02:00 PM - 03:00 PM</option>
+        <option>03:00 PM - 04:00 PM</option>
+        <option>04:00 PM - 05:00 PM</option>
+        <option>05:00 PM - 06:00 PM</option>
+        <option>06:00 PM - 07:00 PM</option>
+        <option>07:00 PM - 08:00 PM</option>
+        <option>08:00 PM - 09:00 PM</option>
+        <option>09:00 PM - 10:00 PM</option>
+        <option>10:00 PM - 11:00 PM</option>
+        <option>11:00 PM - 12:00 AM</option>
+
+    </select>
+
+
+    <div class="buttons">
+
+        <button class="submit"
+                onclick="saveData()">
+            Submit
+        </button>
+
+
+        <button class="download"
+                onclick="downloadPDF()">
+            Download PDF
+        </button>
+
+    </div>
+
+
+    <p id="message"></p>
+
+</div>
+
+
+<!-- JavaScript File -->
+<script src="script.js"></script>
+
+</body>
+</html>
